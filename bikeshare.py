@@ -49,7 +49,7 @@ def load_data(city, month, day):
     Returns:
         df - Pandas DataFrame containing city data filtered by month and day
     """
-    
+    city = city.lower()
     df = pd.read_csv(CITY_DATA[city])
     if month=='all' and day=='all':
     	df = df
